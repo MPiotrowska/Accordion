@@ -1,5 +1,5 @@
 <template>
-  <Tutorial/>
+  <Accordion />
 </template>
 
 <script>
