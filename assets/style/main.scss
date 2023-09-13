@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+* {
+    font-family: $general-font-family;
+    font-weight: $text-weight-general;
+    color: $general-text-color;
+    font-size: $text-size-general;
+    line-height: $text-line-height;
+    box-sizing: border-box;
+
+}
