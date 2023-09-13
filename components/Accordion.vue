@@ -10,7 +10,7 @@
                 <div class="accordion-title">{{ title }}</div>
                 <div v-for="(item, index) in items" :key="index" class="accordion-item"
                     :class="{ 'active': index === activeTab }" @click="toggleAccordion(index)">
-                    <div class="accordion-item-title">{{ item.title }}</div>
+                    <div class="accordion-item-title" :class="{ 'active': index === activeTab }">{{ item.title }}</div>
                     <div class="accordion-item-description" v-if="index === activeTab">{{ item.text }}</div>
                     <div class="accordion-item-image" v-if="index === activeTab"><img :src="items[activeTab].image"
                             alt="Accordion Image" />
@@ -47,9 +47,10 @@ export default {
 
 <style scoped lang="scss">
 .accordion {
+    font-family: $general-font-family;
+
     .accordion-name {
         color: $section-name-text-color;
-        font-family: $general-font-family;
         font-size: $text-size-name;
         line-height: $text-line-height-name;
         font-weight: $text-weight-general;
@@ -58,7 +59,6 @@ export default {
     .accordion-title {
         color: $general-heading-color;
         font-weight: $text-weight-bold ;
-        font-family: $general-font-family;
         font-size: $text-size-heading;
         line-height: $text-line-height-heading ;
 
@@ -93,6 +93,21 @@ export default {
                 img {
                     height: 120px;
 
+                }
+            }
+
+            .accordion-item-title {
+                font-size: $text-size-subheading;
+                color: $general-subheading-color;
+                line-height: $text-line-height-subheading;
+
+                &.active {
+                    color: $active-text-color;
+                }
+
+                @media (max-width: $large) {
+                    font-size: $text-size-subheading-mobile;
+                    line-height: $text-line-height-subheading-mobile;
                 }
             }
 

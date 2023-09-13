@@ -1,5 +1,13 @@
 //variables.scss
 
+//sizes for media queries
+
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 $general-font-family: 'Work Sans';
 
 $section-name-text-color: #FF22B1;
@@ -23,11 +31,4 @@ $text-line-height-name: 25px;
 $text-line-height: 26px;
 $text-line-height-heading: 41px;
 $text-line-height-subheading: 25.2px;
-
-//sizes for media 
-
-$small: 576px;
-$medium: 768px;
-$large: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+$text-line-height-subheading-mobile: 21.6px;
