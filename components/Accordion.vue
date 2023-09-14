@@ -1,4 +1,3 @@
-
 <template>
     <div class="accordion">
         <div class="accordion-content">
@@ -33,7 +32,6 @@ import accordionData from './AccordionData.json';
 
 
 export default {
-
     data() {
         return {
             activeTab: 0,
@@ -64,7 +62,7 @@ export default {
         font-size: $text-size-name;
         line-height: $text-line-height-name;
         font-weight: $text-weight-general;
-        margin-bottom: 15px;
+        margin-bottom: $space-sm;
     }
 
     .accordion-title {
@@ -72,8 +70,8 @@ export default {
         font-weight: $text-weight-bold ;
         font-size: $text-size-heading;
         line-height: $text-line-height-heading ;
-        margin-bottom: 34px;
-        padding-right: 40px;
+        margin-bottom: $space-lg;
+        padding-right: $space-xl;
 
         @media (max-width: $large) {
             font-size: $text-size-heading-mobile;
@@ -84,6 +82,7 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: $space-xl;
 
 
         @media (max-width: $large) {
@@ -95,8 +94,6 @@ export default {
 
         .accordion-content-section {
             flex: 1;
-            padding-right: 40px;
-            padding-left: 40px;
             max-width: 400px;
 
 
@@ -104,7 +101,8 @@ export default {
                 cursor: pointer;
                 padding: 18px;
                 border-radius: 3px;
-                margin-top: 18px;
+                margin-top: $space-sm;
+
 
                 background: $general-background;
 
@@ -144,8 +142,8 @@ export default {
                     font-size: $text-size-general;
                     line-height: $text-line-height ;
                     font-weight: $text-weight-general;
-                    padding-right: 40px;
-                    padding-top: 15px;
+                    padding-right: $space-xl;
+                    padding-top: $space-sm;
 
 
 
@@ -153,7 +151,7 @@ export default {
 
                     @media (max-width: $large) {
                         font-size: $text-size-general-mobile;
-                        padding-right: 15px;
+                        padding-right: $space-sm;
 
                     }
 
@@ -205,7 +203,7 @@ export default {
 
         .accordion-content {
             flex-direction: column;
-            max-height: 10px;
+            max-height: $space-xs;
 
         }
 
