@@ -48,8 +48,15 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
+ 
   modules: [
+    '@nuxtjs/svg-sprite',
   ],
+
+    svgSprite: {
+    // manipulate module options
+  },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
