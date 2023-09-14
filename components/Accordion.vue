@@ -23,12 +23,9 @@
         </div>
     </div>
 </template>
+
 <script>
-
 import axios from 'axios';
-
-
-
 
 export default {
     data() {
@@ -42,7 +39,7 @@ export default {
     },
 
     created() {
-        // Fetch data from the endpoint when the component is created
+        // Fetching data from the endpoint when the component is created
         this.fetchData();
     },
 
@@ -53,7 +50,7 @@ export default {
                 const response = await axios.get('https://eoyge3duj7xtdqd.m.pipedream.net');
                 const data = response.data;
 
-                // Update component data with fetched data
+                // Updates component data with fetched data
                 this.tag = data.tag;
                 this.title = data.title;
                 this.items = data.items;
@@ -80,8 +77,6 @@ export default {
         },
     },
 };
-
-
 </script>
 
 <style scoped lang="scss">
