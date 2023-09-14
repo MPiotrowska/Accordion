@@ -15,7 +15,7 @@
                             src="../assets/svg/arrow.svg" alt="Arrow" />
                     </div>
                     <div class="accordion-item-description" v-if="index === activeTab">{{ item.text }}</div>
-                    <div class="accordion-item-image" v-if="index === activeTab"><img :src="items[activeTab].image"
+                    <div class="accordion-item-image" v-if="index === activeTab"><img :src="item.image"
                             alt="Accordion Image" />
                     </div>
                 </div>
@@ -24,7 +24,8 @@
     </div>
 </template>
 <script>
-import accordionData from './AccordionData.json';
+
+import axios from 'axios';
 
 
 
@@ -33,12 +34,33 @@ export default {
     data() {
         return {
             activeTab: 0,
-            tag: accordionData.tag,
-            title: accordionData.title,
-            items: accordionData.items,
+            tag: null,
+            title: null,
+            items: [],
         };
     },
+
+    created() {
+        // Fetch data from the endpoint when the component is created
+        this.fetchData();
+    },
+
     methods: {
+        async fetchData() {
+            try {
+                const response = await axios.get('https://eoyge3duj7xtdqd.m.pipedream.net');
+                const data = response.data;
+
+                // Update component data with fetched data
+                this.tag = data.tag;
+                this.title = data.title;
+                this.items = data.items;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        },
+
+
         toggleAccordion(index) {
             this.activeTab = index;
         },

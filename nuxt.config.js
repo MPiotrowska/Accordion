@@ -55,7 +55,12 @@ export default {
  
   modules: [
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/axios',
   ],
+
+    axios: {
+    // proxy: true
+  },
 
     svgSprite: {
     // manipulate module options
