@@ -1,7 +1,8 @@
 # Accessible Accordion Component in Nuxt.js
 
 ## Design
-<img width="929" alt="Screenshot 2023-09-14 at 14 09 37" src="https://github.com/MPiotrowska/Accordion/assets/38261690/a3bca2b1-fc27-4909-9155-0ebe9464cd3d">
+<img width="934" alt="Screenshot 2023-09-14 at 14 19 18" src="https://github.com/MPiotrowska/Accordion/assets/38261690/6405cd52-ba7d-4037-b4d1-d9f0fca2f293">
+
 
 
 ## Table of Contents 
