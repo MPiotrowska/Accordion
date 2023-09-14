@@ -12,7 +12,7 @@
                     <div class="accordion-item-svg-section">
                         <div class="accordion-item-title" :class="{ 'active': index === activeTab }">{{ item.title }}</div>
                         <img class='accordion-item-arrow' :class="{ 'active': index === activeTab }"
-                            src="../assets/svg/arrow.svg" alt="arrow" />
+                            src="../assets/svg/arrow.svg" alt="Arrow" />
                     </div>
                     <div class="accordion-item-description" v-if="index === activeTab">{{ item.text }}</div>
                     <div class="accordion-item-image" v-if="index === activeTab"><img :src="items[activeTab].image"
@@ -25,6 +25,7 @@
 </template>
 <script>
 import accordionData from './AccordionData.json';
+
 
 
 
@@ -54,6 +55,8 @@ export default {
         },
     },
 };
+
+
 </script>
 
 <style scoped lang="scss">
@@ -76,6 +79,7 @@ export default {
         margin-bottom: $space-lg;
         padding-right: $space-xl;
 
+
         @media (max-width: $large) {
             font-size: $text-size-heading-mobile;
         }
@@ -91,8 +95,6 @@ export default {
             justify-content: space-between;
 
         }
-
-
 
         .accordion-content-section {
             flex: 1;
@@ -123,6 +125,7 @@ export default {
                 }
 
                 .accordion-item-title {
+                    font-weight: $text-weight-bold ;
                     font-size: $text-size-subheading;
                     color: $general-subheading-color;
                     line-height: $text-line-height-subheading;
@@ -175,6 +178,7 @@ export default {
         flex: 2;
         max-height: 540px;
         max-width: 650px;
+        margin-top: $space-lg;
 
 
         @media (max-width: $large) {
