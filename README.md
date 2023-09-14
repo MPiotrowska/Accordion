@@ -1,4 +1,10 @@
-# accordion
+# Accordion
+
+## Design
+<img width="913" alt="Screenshot 2023-09-14 at 12 41 43" src="https://github.com/MPiotrowska/Accordion/assets/38261690/028088f7-636f-4438-9ae7-3ad64ee2612f">
+
+
+
 
 ## Build Setup
 
