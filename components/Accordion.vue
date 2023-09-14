@@ -1,6 +1,6 @@
 <template>
     <div class="accordion">
-        <div class="accordion-content">
+        <div v-if="loaded" class="accordion-content">
             <div class="accordion-image">
                 <img :src="items[activeTab].image" alt="Accordion Image" />
             </div>
@@ -37,6 +37,7 @@ export default {
             tag: null,
             title: null,
             items: [],
+            loaded: false,
         };
     },
 
@@ -48,6 +49,7 @@ export default {
     methods: {
         async fetchData() {
             try {
+                this.loaded = false;
                 const response = await axios.get('https://eoyge3duj7xtdqd.m.pipedream.net');
                 const data = response.data;
 
@@ -55,6 +57,7 @@ export default {
                 this.tag = data.tag;
                 this.title = data.title;
                 this.items = data.items;
+                this.loaded = true;
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
